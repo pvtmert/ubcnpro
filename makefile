@@ -16,5 +16,5 @@ clean:
 
 default: $(OUTPUT)
 all: default run
-run:
+run: $(OUTPUT)
 	$(OUTPUT)
