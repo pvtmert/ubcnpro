@@ -19,6 +19,7 @@
 
 int main(int argc, char **argv)
 {
-
+	// lets be more social for now
+	printf("hello world\n");
 	return 0;
 }

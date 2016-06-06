@@ -1,9 +1,16 @@
+/*
+	http.h: http protocol base definitions
+	author: mert akengin
+	date: 2016/06/06
+	description:
+		to be added
+*/
 
 #ifndef _HTTP_H_
 #define _HTTP_H_
 
 typedef enum http_method {
-	NO_METHOD,
+	HTTP_METHOD_NONE,
 	HTTP_GET,
 	HTTP_POST,
 	HTTP_PUT,
@@ -16,20 +23,20 @@ typedef enum http_method {
 } http_method_t;
 
 typedef enum http_auth_method {
-	NO_METHOD,
+	HTTP_AUTH_NONE,
 	HTTP_AUTH_BASIC,
 	HTTP_AUTH_DIGEST,
 	HTTP_AUTH_NTLM,
 } http_auth_method_t;
 
 typedef enum http_cookie_flags {
-	NO_FLAGS,
+	HTTP_COOKIE_NONE,
 	HTTP_COOKIE_HTTPONLY,
 	HTTP_COOKIE_SECURE,
 } http_cookie_flags_t;
 
 typedef enum http_cache_method {
-	NO_METHOD,
+	HTTP_CACHE_NONE,
 	HTTP_CACHE_REQ_NOCACHE,
 	HTTP_CACHE_REQ_NOSTORE,
 	HTTP_CACHE_REQ_MAXAGE,
