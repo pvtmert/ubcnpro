@@ -18,3 +18,6 @@ default: $(OUTPUT)
 all: default run
 run: $(OUTPUT)
 	$(OUTPUT)
+
+br%:
+	git checkout $<
