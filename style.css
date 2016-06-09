@@ -55,11 +55,14 @@ header > h5 {
 	color: #e06870;
 }
 
+.btn.btn-lg { padding:1rem; }
 .navbar {
 	position:fixed;
 	top:0;
 	left:0;
 	right:0;
+	margin:0;
+	padding:0.9rem;
 }
 
 .bgbase {
