@@ -1,0 +1,87 @@
+/*
+	UBCNPRO
+	customized css
+*/
+
+
+header > h4,
+header > h5 {
+	margin-top: 4rem;
+	margin-bottom: 2rem;
+}
+.bg-grey {
+	background-color: #efefef;
+	padding: 1rem;
+	border-radius: .3rem;
+}
+.grid-hero {
+	margin-top: 10rem;
+	margin-bottom: 10rem;
+}
+.grid-hero h3 {
+	margin-bottom: 5rem;
+}
+.grid-hero .notes {
+	margin: 4rem 0;
+}
+.grid-footer {
+	color: #888;
+	margin-top: 4rem;
+	margin-bottom: 4rem;
+}
+.grid-footer a {
+	color: #666;
+}
+.notes {
+	margin: 4rem 0;
+	color: #666;
+}
+.empty .icon {
+	font-size: 4rem;
+}
+.code {
+	color: #666;
+}
+.code .com {
+	color: #adadad;
+}
+.code .tag {
+	color: #4452c0;
+}
+.code .atn {
+	color: #666;
+}
+.code .atv {
+	color: #e06870;
+}
+
+.navbar {
+	position:fixed;
+	top:0;
+	left:0;
+	right:0;
+}
+
+.bgbase {
+	background-color:transparent;
+	background-position:center center;
+	background-size:auto;
+	background-clip:border-box;
+	background-attachment:local;
+	background-repeat:no-repeat;
+}
+
+.contain { background-size:contain; }
+.cover { background-size:cover; }
+.local { background-attachment:local; }
+
+#intro {
+	background-image:url('./img/bg.jpg');
+	background-attachment:fixed;
+	background-position:center top;
+	box-shadow:inset 0 0 0 99em rgba(0,0,0,0.67);
+	min-height:100vh;
+	padding:10vh 10vh;
+	color:#eee;
+}
+#intro H1, #intro H5 { text-align:center; }
