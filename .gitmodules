@@ -1,0 +1,3 @@
+[submodule "PHP-URL-Shortener"]
+	path = PHP-URL-Shortener
+	url = https://github.com/briancray/PHP-URL-Shortener.git
