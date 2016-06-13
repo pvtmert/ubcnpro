@@ -86,12 +86,13 @@ header > h5 {
 	min-height:100vh;
 	padding:10vh 10vh;
 	color:#eee;
+	box-sizing:border-box;
 }
 #intro H1, #intro H5 { text-align:center; }
-#adv { padding:10rem 0; }
+#adv { min-height:100vh; padding:10rem 0; box-sizing:border-box; }
 #adv P { font-size:1.3em; }
 #cont { font-size:1.1em; box-shadow:inset 0 0 0 99em #222; color:#eee; padding:64px 32px; box-sizing:border-box; min-height:100vh; }
-#cont IFRAME { width:100%; height:50vh; display:block; border:none; margin:24px 0; }
+#cont IFRAME { width:100%; height:50vh; display:block; border:none; margin:24px 0; box-sizing:border-box; }
 @media (min-width:960px) {
 	.navbar #hmenu A:nth-child(1) { display:none; }
 }
