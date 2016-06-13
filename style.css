@@ -88,3 +88,10 @@ header > h5 {
 	color:#eee;
 }
 #intro H1, #intro H5 { text-align:center; }
+#adv P { font-size:1.3em; }
+
+@media (max-width:960px) {
+	.navbar #links {
+		display:none;
+	}
+}

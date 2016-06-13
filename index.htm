@@ -25,15 +25,15 @@
 	</head>
 	<body>
 		<header class="navbar bg-grey" >
-			<section class="navbar-section">
-				<a href="#" class="btn btn-link btn-lg">
+			<section class="navbar-section" id=hmenu >
+				<a href="#" class="btn btn-link btn-lg" >
 					<i class="icon icon-menu"></i>
 				</a>
-				<a href="#" class="navbar-brand">UBCNPRO</a>
+				<a href="#" class="navbar-brand">livingwalls</a>
 			</section>
-			<section class="navbar-section">
+			<section id=links class="navbar-section">
 				<a href="#" class="btn btn-link">projects</a>
-				<a href="#" class="btn btn-link">about</a>
+				<a href="#adv" class="btn btn-link">about</a>
 				<a href="#" class="btn btn-primary">contact</a>
 			</section>
 		</header>
@@ -42,6 +42,37 @@
 				<h1>it's alive!</h1>
 				<h5>get ready for bleeding edge tech and anaytics made until today</h5>
 			</section>
-		<section>
+		</section>
+		<section id=adv class="section">
+			<section class="container grid-960 grid-hero">
+				<p>
+					Since 2014 we have been working on IoT especially beacon systems. Thus allowed us to observe and improve current technologies as they evolve.
+				</p>
+				<p>
+					With the latest improvements of overall protocol specifications and implementations it is now possible to pinpoint users' locations.
+				</p>
+				<p>
+					Such a way that, it is encrypted end to end, between user and our servers. So nobody else is eavesdropping on your personal data.
+				</p>
+				<p>
+					We provide you to use raw analytics data, you can do whatever you want with it. No extra charges to see mobile users, bots, getting their true IP addresses.
+				</p>
+			</section>
+		</section>
+		<script>
+		function toggle(obj,a,b) {
+			if(obj == a)
+				obj = b;
+			else
+				obj = a;
+			return obj;
+		}
+		document.getElementById("hmenu").addEventListener("click",function(e) {
+			document.getElementById("links").style.display = toggle(document.getElementById("links").style.display,"block","none");
+			this.children[1].style.display = toggle(this.children[1].style.display,"none","inline-block");
+			console.log(this);
+			return false;
+		});
+		</script>
 	</body>
 </html>
