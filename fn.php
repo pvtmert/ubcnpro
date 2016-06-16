@@ -19,4 +19,12 @@
 		$res .= "</table>\n";
 		return $res;
 	}
+	function hashtourl($handle,$hash)
+	{
+		$res = $handle->query("select * from ".urltab." where hash like '".SQLite3::escapeString($hash)."%' ;") or die("error htourl");
+		$ret = array();
+		while($R = $res->fetchArray(SQLITE3_ASSOC))
+			$ret[] = $R;
+		return $ret;
+	}
 ?>

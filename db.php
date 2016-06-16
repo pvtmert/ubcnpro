@@ -53,9 +53,9 @@
 		$res = $handle->query("select count(*) as cnt from ".clicktab." where for = '".intval($id)."' ;") or die("error getting click count");
 		return intval($res->fetchArray(SQLITE3_NUM)[0]);
 	}
-	function table_dump($handle,$tabname)
+	function table_dump($handle,$tabname,$rev = false)
 	{
-		$res = $handle->query("select * from ".$tabname." ;") or die("error dump");
+		$res = $handle->query("select * from ".$tabname." order by id ".($rev?"desc":"asc")." ;") or die("error dump");
 		$ret = array();
 		while($R = $res->fetchArray(SQLITE3_ASSOC))
 			$ret[] = $R;
@@ -78,7 +78,14 @@
 			array("id","name","mail","pass","lvl","loc"),
 			array(0,"admin","root@localhost",md5("admin"),99,"/"));
 	if(table_rowcnt($db,urltab) < 1)
+	{
 		table_add($db,urltab,
 			array("cid","url","loc","lat","lon","hash"),
-			array(0,"http://google.com","nowhere",0,0,md5("ggl")));
+			array(0,"https://google.com/","nowhere",0,0,md5("test")));
+		for($i=0;$i<22;$i++)
+			table_add($db,urltab,
+				array("cid","url","loc","lat","lon","hash"),
+				array(0,sprintf("https://www.livinwalls.io/?%02d",$i+1),"the hq",0,0,strtolower(md5(sprintf("lvn%02d",$i)))));
+	}
+
 ?>
