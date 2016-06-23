@@ -1,0 +1,3 @@
+[submodule "longs"]
+	path = longs
+	url = https://github.com/riolet/longs.git
