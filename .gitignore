@@ -1,6 +1,5 @@
-.gitingore
-opts
-spectre
 PHP-URL-Shortener
+spectre
+opts
 *.o
 app
